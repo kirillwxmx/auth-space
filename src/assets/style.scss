@@ -1,0 +1,133 @@
+.wrapper {
+	width: 100%;
+	min-height: 100vh;
+	background: #160430;
+	display: flex;
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	color: #fff;
+	position: relative;
+	overflow: hidden;
+	.background {
+		min-height: 100vh;
+		width: 70%;
+		background-image: url("./images/background.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		@media screen and (max-width: 768px) and (min-width: 320px) {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.auth {
+		width: 30%;
+		min-height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10px;
+		@media screen and (max-width: 768px) and (min-width: 320px) {
+			width: 100%;
+			z-index: 10;
+		}
+		.auth-title {
+			font-weight: bold;
+			font-size: 70px;
+			padding-bottom: 20px;
+		}
+		.auth-subtitle {
+			font-size: 15px;
+			padding-top: 10px;
+		}
+		.auth-form {
+			width: 100%;
+			margin-top: 10px;
+			div {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				display: flex;
+				align-items: center;
+				svg {
+					position: absolute;
+					left: 15px;
+				}
+				input {
+					width: 100%;
+					background-color: #261046;
+					border: none;
+					padding: 15px;
+					border-radius: 10px;
+					padding-left: 40px;
+					color: #fff;
+					&:focus {
+						color: #3e70a1;
+					}
+				}
+			}
+			button {
+				margin-top: 10px;
+				width: 100%;
+				padding-top: 10px;
+				padding-bottom: 10px;
+				text-align: center;
+				background: linear-gradient(90deg, #501794, #3e70a1);
+				border: none;
+				color: #fff;
+				font-size: 22px;
+				font-weight: normal;
+				border-radius: 10px;
+				margin-bottom: 10px;
+				cursor: pointer;
+				transition: background 3s ease;
+				&:hover {
+					background: linear-gradient(270deg, #501794, #3e70a1);
+				}
+			}
+		}
+		hr {
+			background-color: #fff;
+			height: 1px;
+			border: none;
+		}
+		.with {
+			padding-top: 10px;
+			font-size: 12px;
+			font-weight: 400;
+			color: #b6b6b6;
+		}
+		.social {
+			width: 100%;
+			display: flex;
+			gap: 10px;
+			margin-top: 10px;
+			li {
+				width: 50%;
+				display: flex;
+				justify-content: center;
+				border-radius: 10px;
+				background-color: #3b2063;
+				padding: 10px;
+				cursor: pointer;
+				transition: all 1s ease;
+				span {
+					padding-left: 10px;
+				}
+				&:hover {
+					background-color: #3e70a1;
+					transform: scale(1.05);
+				}
+			}
+		}
+		.term {
+			font-size: 12px;
+			font-weight: 500;
+			color: #b6b6b6;
+			padding-top: 10px;
+			span {
+				color: #9d5ce9;
+			}
+		}
+	}
+}
